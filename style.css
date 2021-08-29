@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+body {
+  font-family: "Urbanist", sans-serif;
+}
+h1 {
+  font-size: 8em;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+}
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+section .cursor {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  margin: -7.5px 0 0 -7.5px;
+  background: #0013b9;
+  border-radius: 50%;
+  user-select: none;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 9999;
+}
+section .shapes {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: #0013b9;
+  overflow: hidden;
+}
+section .shapes .shape {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform;
+}
+section .shapes .shape:nth-child(1) {
+  width: 650px;
+  height: 650px;
+  margin: -325px 0 0 -325px;
+  background-color: #0059fe;
+}
+section .shapes .shape:nth-child(2) {
+  width: 440px;
+  height: 440px;
+  margin: -220px 0 0 -220px;
+  background-color: #e79121;
+}
+section .shapes .shape:nth-child(3) {
+  width: 270px;
+  height: 270px;
+  margin: -135px 0 0 -135px;
+  background-color: #f0dd70;
+}
+section .content {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  mix-blend-mode: screen;
+}
