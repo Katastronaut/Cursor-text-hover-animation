@@ -1,0 +1,98 @@
+// Variables
+// --------------------
+@color1: #0013b9;
+@color2: #0059fe;
+@color3: #e79121;
+@color4: #f0dd70;
+@colorCursor: @color1;
+
+// General stylings
+// --------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+h1 {
+  font-size: 8em;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  color: #000000;
+}
+
+// Custom stylings
+// --------------------
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  // Cursor
+  .cursor {
+    position: fixed;
+    width: 15px;
+    height: $width;
+    margin: (-$width/2) 0 0 (-$width/2);
+    background: @colorCursor;
+    border-radius: 50%;
+    user-select: none;
+    will-change: transform;
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  // Shapes
+  .shapes {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: @color1;
+    overflow: hidden;
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      will-change: transform;
+
+      &:nth-child(1) {
+        width: 650px;
+        height: $width;
+        margin: (-$width/2) 0 0 (-$width/2);
+        background-color: @color2;
+      }
+      &:nth-child(2) {
+        width: 440px;
+        height: $width;
+        margin: (-$width/2) 0 0 (-$width/2);
+        background-color: @color3;
+      }
+      &:nth-child(3) {
+        width: 270px;
+        height: $width;
+        margin: (-$width/2) 0 0 (-$width/2);
+        background-color: @color4;
+      }
+    }
+  }
+
+  // Content
+  .content {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: $width;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    mix-blend-mode: screen;
+  }
+}
